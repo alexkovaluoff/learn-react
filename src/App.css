@@ -1,6 +1,6 @@
 .app-wrapper {
   display: grid;
-  width: 1500px;
+  width: 1200px;
   margin: 0 auto;
   font-size: 20px;
 
@@ -12,33 +12,4 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 0px;
 
-}
-
-.header {
-  grid-area: h;
-  background-color: black;
-}
-
-.header img {
-  height: 60px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: aquamarine;
-}
-
-.nav a {
-  text-decoration: none;
-  color: black;
-}
-
-
-.nav a:hover {
-  color: deeppink;
-}
-
-.content {
-  grid-area: c;
-  background-color: darkred;
 }
