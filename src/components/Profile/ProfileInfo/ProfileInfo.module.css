@@ -1,0 +1,17 @@
+.profileInfo {
+    margin:20px;
+}
+
+.profileInfoHeaderVideo {
+    width:340px;
+    height:190px;
+}
+
+.avatar {
+    height:120px;
+    border-radius: 60px;
+}
+
+.description {
+
+}
