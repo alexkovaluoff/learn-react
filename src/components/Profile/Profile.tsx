@@ -5,7 +5,7 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = () => {
     return (
-        <div>
+        <div className={classes.profile}>
             <ProfileInfo />
             <MyPosts />
         </div>

@@ -1,10 +1,13 @@
-.profileInfo {
-    margin:20px;
+.profileBlock {
 }
 
-.profileInfoHeaderVideo {
+.profileHeaderVideo {
     width:340px;
     height:190px;
+}
+
+.profileInfo {
+    padding: 20px;
 }
 
 .avatar {
