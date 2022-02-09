@@ -22,23 +22,42 @@ const Message = (props: any) => {
 }
 
 const Messages = (props: any) => {
+
+    let dialogsData = [
+        {id: 1, name: 'Vlados'},
+        {id: 2, name: 'Antoha'},
+        {id: 3, name: 'Slaviks'},
+        {id: 4, name: 'Stason'},
+        {id: 5, name: 'Suhoi'},
+        {id: 6, name: 'Glad Valakas'}
+    ];
+
+    let messageData = [
+        {id: 1, msg: 'Чё каво?'},
+        {id: 2, msg: 'Мяу'},
+        {id: 3, msg: 'Welcome to USA'},
+        {id: 4, msg: 'Пиксельплекс'},
+        {id: 5, msg: 'я пакакал'},
+        {id: 6, msg: 'Хай гёрлс энд хаай зяблс'}
+    ]
+
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-                <DialogItem name="Vlados" id='1' />
-                <DialogItem name="Antoha" id='2' />
-                <DialogItem name="Slaviks" id='3' />
-                <DialogItem name="Stason" id='4' />
-                <DialogItem name="Suhoi" id='5' />
-                <DialogItem name="Aboba" id='6' />
+                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
+                <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
+                <DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
+                <DialogItem name={dialogsData[4].name} id={dialogsData[4].id} />
+                <DialogItem name={dialogsData[5].name} id={dialogsData[5].id} />
             </div>
             <div className={classes.messages}>
-                <Message message='Чё каво?' />
-                <Message message='Мяу' />
-                <Message message='Welcome to USA' />
-                <Message message='Пиксельплекс' />
-                <Message message='я пакакал' />
-                <Message message='Хай гёрлс энд хаай зяблс' />
+                <Message message={messageData[0].msg} />
+                <Message message={messageData[1].msg} />
+                <Message message={messageData[2].msg} />
+                <Message message={messageData[3].msg} />
+                <Message message={messageData[4].msg} />
+                <Message message={messageData[5].msg} />
             </div>
         </div>
     )
