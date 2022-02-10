@@ -5,11 +5,11 @@ const ProfileInfo = (props: any) => {
     return (
         <div className={classes.profileBlock}>
             <div className={classes.profileHeaderImage} >
-                <img  src='/assets/aboba.png' alt='Aboba'/>
+                <img src='/assets/aboba.png' alt='Profile header pic'/>
             </div>
             <div className={classes.profileInfo}>
-                <img className={classes.avatar} src='https://memepedia.ru/wp-content/uploads/2021/02/aboba-glad-valakas.jpg'/>
-                description
+                <img className={classes.avatar} src='/assets/avatar.jpg'/>
+                Богданчик Сухачёв 12 лет
             </div>
         </div>
     );

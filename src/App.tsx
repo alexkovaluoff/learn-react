@@ -11,6 +11,7 @@ import Messages from './components/Messages/Messages';
 
 
 const App = (props:any) => {
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
@@ -18,8 +19,8 @@ const App = (props:any) => {
                 <Navbar />
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/messages' element={<Messages />}/>
-                        <Route path='/profile' element={<Profile />}/>
+                        <Route path='/messages' element={<Messages messages={props.messages} dialogs={props.dialogs}/>}/>
+                        <Route path='/profile' element={<Profile postsData={props.postsData}/>}/>
                         <Route path='/news' element={<News />}/>
                         <Route path='/music' element={<Music />}/>
                         <Route path='/settings' element={<Settings />}/>

@@ -2,15 +2,10 @@ import React from 'react';
 import classes from './MyPosts.module.css'
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props: any) => {
 
-    let postsData = [
-        {id: 1, message: 'Hello world!', likes: '12'},
-        {id: 1, message: 'Aboba', likes: '228'}
-    ];
-
-    let postElement = postsData
-        .map( post => <Post message={post.message} likes={post.likes} /> )
+    let postElements = props.postsData
+        .map( (p:{id:number, message:string, likes:string}) => <Post key={p.id} message={p.message} likes={p.likes} /> )
 
     return (
             <div className={classes.postsBlock}>
@@ -18,7 +13,7 @@ const MyPosts = () => {
                 <div>
                     <div className={classes.item}>
                         <div className={classes.textArea}>
-                            <textarea></textarea>
+                            <textarea defaultValue="What's up?!"></textarea>
                         </div>
                         <div>
                             <button className={classes.buttonStyle}>Add post</button>
@@ -27,7 +22,7 @@ const MyPosts = () => {
                     </div>
                 </div>
                 <div className={classes.posts}>
-                    {postElement}
+                    {postElements}
                 </div>
             </div>
     );

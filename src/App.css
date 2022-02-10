@@ -1,6 +1,7 @@
 .app-wrapper {
     display: grid;
     width: 1200px;
+    height: 1000px;
     margin: 0 auto;
     font-size: 20px;
 
@@ -8,7 +9,7 @@
   "h h"
   "n c";
 
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 90px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 0px;
 }
