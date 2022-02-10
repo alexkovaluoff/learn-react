@@ -1,11 +1,16 @@
 .profileBlock {
+
 }
 
-.profileHeaderVideo {
-    width:340px;
-    height:190px;
+.profileHeaderImage {
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
 
+.profileHeaderImage img {
+    height:300px;
+}
 .profileInfo {
     padding: 20px;
 }
