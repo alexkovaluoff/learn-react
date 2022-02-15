@@ -1,8 +1,11 @@
-.nav {
+.sideBar {
     grid-area: n;
-    background-color: #88a2bc;
-    text-align: left;
     padding: 20px;
+    background-color: #88a2bc;
+}
+
+.nav {
+    text-align: left;
 }
 
 .item a {
@@ -12,4 +15,28 @@
 
 .item a.active {
     color: #253b59;
+}
+
+.friendsBlock {
+
+}
+
+.friendsBlock img {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.friendsBlock p {
+    text-align: left;
+    color: #253b59;
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.friendsBlockContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 14px;
 }

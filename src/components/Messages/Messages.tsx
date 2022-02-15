@@ -7,14 +7,22 @@ import Message from "./Message/Message";
 const Messages = (props: any) => {
 
     let dialogsElements = props.state.dialogs
-        .map( (d: {id: number, name: string}) => <DialogItem key={d.id} name={d.name} id={d.id} /> );
+        .map( (d: {id: number, name: string}) => {
+                return (
+                    <div className={classes.dialogsItems}>
+                        <img src='assets/postava.png'/>
+                        <DialogItem key={d.id} name={d.name} id={d.id}/>
+                    </div>
+                )
+            }
+        );
 
     let messagesElements = props.state.messages
         .map( (m:{id: number, msg: string}) => <Message key={m.id} message={m.msg} />);
 
     return (
         <div className={classes.dialogs}>
-            <div className={classes.dialogsItems}>
+            <div>
                 {dialogsElements}
             </div>
             <div className={classes.messages}>

@@ -1,15 +1,18 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 4fr 10fr;
+    padding: 20px;
 }
 
 .dialogsItems {
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2px;
 }
 
 .dialogsItems.active {
     color: midnightblue;
-    padding: 20px;
 }
 
 .dialog{
@@ -17,9 +20,22 @@
 }
 
 .messages {
-    padding: 20px;
 }
 
 .message {
     color: black;
+    margin-top: 2px;
+    vertical-align: bottom;
+}
+
+.dialogsItems img {
+    margin-right: 10px;
+    height: 23.5px;
+    border-radius: 20px;
+    vertical-align: bottom;
+}
+
+.messages img {
+    height: 40px;
+    border-radius: 20px;
 }
