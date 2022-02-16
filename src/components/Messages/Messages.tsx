@@ -18,7 +18,15 @@ const Messages = (props: any) => {
         );
 
     let messagesElements = props.state.messages
-        .map( (m:{id: number, msg: string}) => <Message key={m.id} message={m.msg} />);
+        .map( (m:{id: number, msg: string}) => {
+            return (
+                <div className={classes.message}>
+                    <img src='assets/postava.png'/>
+                    <Message key={m.id} message={m.msg}/>
+                </div>
+            )
+        }
+        );
 
     return (
         <div className={classes.dialogs}>

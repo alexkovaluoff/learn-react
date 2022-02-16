@@ -7,16 +7,25 @@ const MyPosts = (props: any) => {
     let postElements = props.posts
         .map( (p:{id:number, message:string, likes:string}) => <Post key={p.id} message={p.message} likes={p.likes} /> )
 
+    let newPostElement = React.useRef();
+
+    let addPost = () => {
+        // @ts-ignore
+        let text = newPostElement.current.value;
+        props.addPost(text)
+    }
+
     return (
             <div className={classes.postsBlock}>
                 <h3>My posts</h3>
                 <div>
                     <div className={classes.item}>
                         <div className={classes.textArea}>
-                            <textarea defaultValue="What's up?!"></textarea>
+                            {/*@ts-ignore*/}
+                            <textarea ref={newPostElement}></textarea>
                         </div>
                         <div>
-                            <button className={classes.buttonStyle}>Add post</button>
+                            <button className={classes.buttonStyle} onClick={addPost}>Add post</button>
                             <button className={classes.buttonStyle}>Cancel</button>
                         </div>
                     </div>

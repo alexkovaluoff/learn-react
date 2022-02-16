@@ -1,4 +1,4 @@
-let state: object = {
+let state = {
     profilePage: {
         posts: [
             {id: 1, message: 'Hello world!', likes: '12'},
@@ -6,7 +6,7 @@ let state: object = {
             {id: 3, message: 'Я Богдан я богом дан', likes: '1488'}
         ]
     },
-    messagesPage: {
+    messagesPage:  {
         messages: [
             {id: 1, msg: 'Заебал ты со своим ебучим инстаграмом'},
             {id: 2, msg: 'Мяу'},
@@ -25,5 +25,14 @@ let state: object = {
         ]
     }
 };
+
+export let addPost = (postMessage: any) => {
+    let newPost = {
+        id: 4,
+        message: postMessage,
+        likes: '0'
+    };
+    state.profilePage.posts.push(newPost);
+}
 
 export default state;

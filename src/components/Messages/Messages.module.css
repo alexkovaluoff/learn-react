@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .dialogsItems.active {
@@ -16,15 +16,18 @@
 }
 
 .dialog{
-    color: black;
 }
 
+.dialog a{
+    color: #253b59;;
+    text-decoration: none;
+}
 .messages {
 }
 
 .message {
     color: black;
-    margin-top: 2px;
+    margin-bottom: 2px;
     vertical-align: bottom;
 }
 

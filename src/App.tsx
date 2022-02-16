@@ -21,7 +21,9 @@ const App = (props:any) => {
                     <Routes>
                         <Route path='/messages' element={<Messages state={props.state.messagesPage}
                         />} />
-                        <Route path='/profile' element={<Profile state={props.state.profilePage}/>} />
+                        <Route path='/profile' element={<Profile
+                            state={props.state.profilePage}
+                            addPost={props.addPost}/>} />
                         <Route path='/news' element={<News />} />
                         <Route path='/music' element={<Music />} />
                         <Route path='/settings' element={<Settings />}/>
