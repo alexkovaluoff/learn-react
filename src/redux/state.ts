@@ -1,5 +1,10 @@
+import profileReducer from "./profile-reducer";
+import messagesReducer from "./messages-reducer";
+import sidebarReducer from "./sidebar-reducer";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY'
 const SEND_MESSAGE = 'SEND-MESSAGE'
 
@@ -40,37 +45,18 @@ let store = {
     getState() {
         return this._state;
     },
+
     subscribe(observer: any) {
         this._callSubscriber = observer;
     },
 
     dispatch(action: any) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 4,
-                message: this._state.profilePage.newPostText,
-                likes: Math.round(Math.random()*1488)
-            };
-            // @ts-ignore
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = '';
-            // @ts-ignore
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.newText;
-            // @ts-ignore
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._state.messagesPage.newMessageBody = action.body;
-            // @ts-ignore
-            this._callSubscriber(this._state)
-        } else if (action.type === SEND_MESSAGE) {
-            let body = this._state.messagesPage.newMessageBody;
-            this._state.messagesPage.newMessageBody = '';
-            this._state.messagesPage.messages.push({id: 7, msg: body});
-            // @ts-ignore
-            this._callSubscriber(this._state)
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+
+        // @ts-ignore
+        this._callSubscriber(this._state)
     }
 }
 export const addPostActionCreator = () => ({type: ADD_POST})
