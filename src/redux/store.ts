@@ -2,12 +2,6 @@ import profileReducer from "./profile-reducer";
 import messagesReducer from "./messages-reducer";
 import sidebarReducer from "./sidebar-reducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
-
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY'
-const SEND_MESSAGE = 'SEND-MESSAGE'
-
 let store = {
     _state: {
         profilePage: {
@@ -59,10 +53,6 @@ let store = {
         this._callSubscriber(this._state)
     }
 }
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostElementActionCreator = (text: string) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
-export const updateNewMessageBodyCreator = (body: string) => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
 
 export default store;
